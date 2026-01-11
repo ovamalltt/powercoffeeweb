@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Updated to new Color Hunt Palette: #1A120B, #3C2A21, #D5CEA3, #E5E5CB */
+:root {
+  --background: #1a120b;
+  --foreground: #e5e5cb;
+  --card: #3c2a21;
+  --card-foreground: #e5e5cb;
+  --popover: #3c2a21;
+  --popover-foreground: #e5e5cb;
+  --primary: #d5cea3;
+  --primary-foreground: #1a120b;
+  --secondary: #3c2a21;
+  --secondary-foreground: #e5e5cb;
+  --muted: #3c2a21;
+  --muted-foreground: #d5cea3;
+  --accent: #d5cea3;
+  --accent-foreground: #1a120b;
+  --destructive: #b91c1c;
+  --destructive-foreground: #e5e5cb;
+  --border: #d5cea3;
+  --input: #3c2a21;
+  --ring: #d5cea3;
+  --chart-1: #1a120b;
+  --chart-2: #3c2a21;
+  --chart-3: #d5cea3;
+  --chart-4: #e5e5cb;
+  --chart-5: #8b6914;
+  --radius: 1rem;
+  --sidebar: #1a120b;
+  --sidebar-foreground: #e5e5cb;
+  --sidebar-primary: #d5cea3;
+  --sidebar-primary-foreground: #1a120b;
+  --sidebar-accent: #d5cea3;
+  --sidebar-accent-foreground: #1a120b;
+  --sidebar-border: #3c2a21;
+  --sidebar-ring: #d5cea3;
+
+  /* Custom colors - Updated to new palette */
+  --coffee: #3c2a21;
+  --cream: #e5e5cb;
+  --gold: #d5cea3;
+  --espresso: #1a120b;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback", sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-coffee: var(--coffee);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-espresso: var(--espresso);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated glassmorphism to use new palette colors */
+.glass {
+  background: rgba(26, 18, 11, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(213, 206, 163, 0.2);
+}
+
+/* Updated glow to use new gold/sage color */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(213, 206, 163, 0.4);
+}
