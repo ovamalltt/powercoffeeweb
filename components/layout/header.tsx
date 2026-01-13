@@ -1,9 +1,9 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { Bell, Search, User } from "lucide-react"
+import { User } from "lucide-react"
 import { useAuth } from "@/components/auth/auth-provider"
-import { Input } from "@/components/ui/input"
+// import { Input } dihapus karena search bar sudah tidak ada
 
 const pageTitles: Record<string, { title: string; description: string }> = {
   "/dashboard": { title: "Dashboard", description: "Welcome back to PowerCoffee" },
@@ -36,20 +36,11 @@ export function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Search - desktop only */}
-          <div className="hidden lg:block relative w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input placeholder="Search..." className="pl-10 h-10 bg-card border-border rounded-xl" />
-          </div>
-
-          {/* Notifications */}
-          <button className="w-10 h-10 rounded-xl bg-card hover:bg-secondary flex items-center justify-center transition-colors relative">
-            <Bell className="w-5 h-5 text-muted-foreground" />
-            <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full" />
-          </button>
+          {/* SEARCH & NOTIFICATION REMOVED */}
 
           {/* User profile */}
-          <div className="flex items-center gap-3 pl-3 border-l border-border">
+          {/* Aku hapus 'pl-3 border-l' supaya lebih bersih karena tidak ada elemen di kirinya lagi */}
+          <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
               <User className="w-5 h-5 text-primary" />
             </div>

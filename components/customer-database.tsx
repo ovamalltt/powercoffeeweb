@@ -169,10 +169,7 @@ export function CustomerDatabase() {
                   </span>
                 </div>
               </div>
-              <button className="w-8 h-8 rounded-lg hover:bg-secondary flex items-center justify-center transition-colors">
-                <MoreVertical className="w-4 h-4 text-muted-foreground" />
-              </button>
-            </div>
+             
 
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
