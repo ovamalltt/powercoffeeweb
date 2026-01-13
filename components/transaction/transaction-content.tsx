@@ -293,7 +293,7 @@ export default function TransactionContent() {
             disabled={cart.length === 0 || !selectedEmployeeId} // Tombol mati jika kasir belum dipilih
             onClick={() => setIsCheckoutOpen(true)}
           >
-            {selectedEmployeeId ? "Proceed to Checkout" : "Pilih Kasir Dulu"}
+            {selectedEmployeeId ? "Proceed to Checkout" : "Choose your cashier"}
           </Button>
         </div>
       </Card>
